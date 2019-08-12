@@ -486,7 +486,7 @@ class Admin_Init extends Init {
 		 * $_POST['val'] already contains updated number.
 		 */
 		if ( isset( $_POST['val'] ) ) {
-			$value = (int) $_POST['val'];
+			$value = absint($_POST['val']);
 		} else {
 			$value = $this->get_user_option( 0, 'counter_type', 3 ) + 1;
 		}

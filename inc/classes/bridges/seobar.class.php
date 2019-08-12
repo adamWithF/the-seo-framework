@@ -142,7 +142,7 @@ final class SeoBar {
 		|| empty( $_POST['tax_ID'] ) )
 			return;
 
-		$tax_id = (int) $_POST['tax_ID'];
+		$tax_id = absint($_POST['tax_ID']);
 
 		if ( \current_user_can( 'edit_term', $tax_id ) )
 			$this->init_seo_bar_columns_ajax();
